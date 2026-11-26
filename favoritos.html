@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos</title>
+    <link rel="stylesheet" href="tnt.css">
+</head>
+
+<body>
+
+<div class="nombre">
+
+    <aside class="barra">
+
+        <div class="logo">
+            <h2>🎵 Música</h2>
+            <p>Sanjo Playlist</p>
+        </div>
+
+        <ul class="menu">
+            <li><a href="cl.html">🏠 Inicio</a></li>
+            <li class="activo">❤️ Favoritos</li>
+        </ul>
+
+    </aside>
+
+<main>
+
+    <div class="titulo">
+        <h1>Mis Favoritos ❤️</h1>
+        <p>Aquí aparecerán tus canciones favoritas.</p>
+    </div>
+
+    <div id="listaFavoritos" class="lista-favoritos">
+    </div>
+
+</main>
+
+</div>
+
+<script>
+
+function toggleLike(btn, nombre){
+
+    let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+    if(btn.classList.contains("liked")){
+        btn.classList.remove("liked");
+        favoritos = favoritos.filter(c => c !== nombre);
+    } else {
+        btn.classList.add("liked");
+        favoritos.push(nombre);
+    }
+
+    localStorage.setItem("favoritos", JSON.stringify(favoritos));
+}
+
+function cargarFavoritos(){
+
+    const lista = document.getElementById("listaFavoritos");
+    if(!lista) return;
+
+    let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+    if(favoritos.length === 0){
+        lista.innerHTML = "<p>No hay canciones favoritas aún</p>";
+        return;
+    }
+
+    lista.innerHTML = favoritos.map(c => `
+        <div class="cancion-fav">
+            ❤️ ${c}
+        </div>
+    `).join("");
+}
+
+document.addEventListener("DOMContentLoaded", cargarFavoritos);
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

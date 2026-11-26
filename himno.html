@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Himno del Colegio</title>
+
+<link rel="stylesheet" href="tnt.css">
+</head>
+
+<body>
+
+<div class="nombre">
+
+    <aside class="barra">
+
+        <div class="logo">
+            <h2>🎵 Música</h2>
+            <p>Sanjo Playlist</p>
+        </div>
+
+        <ul class="menu">
+            <li><a href="cl.html">🏠 Inicio</a></li>
+            <li><a href="favoritos.html">❤️ Favoritos</a></li>
+        </ul>
+
+    </aside>
+
+    <main>
+
+        <div class="titulo">
+            <h1>🏫 Himno del Colegio</h1>
+            <p>Canciones disponibles</p>
+        </div>
+
+        <div class="cancion" onclick="mostrarLetra(this)">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqK_KCLOOIoGBelXxJTun5e4lIMY5ylTEXcP8rvD0BDH4t80FJq3slXmQk&s=10" class="foto">
+                <span>🎵 Himno oficial</span>
+                
+                <div>
+                    <button
+                        class="like-btn"
+                        data-nombre="Himno oficial"
+                        onclick="event.stopPropagation(); toggleLike(this,'Himno oficial')">
+                        ❤️
+                    </button>
+                </div>
+
+                <div class="letra">
+                    <p>Letra de la cancion</p>
+                        Bajo pliegues celestes y blancos
+                        Santuario de Luz y de Fe,
+                        Centinela de paz y de gloria,
+                        Te crearon triunfal San José.
+                        Ya tu nombre corrió las Provincias
+                        cual reguero de luz y saber
+                        cual reguero de chispas ardientes
+                        esparciendo tu gloria doquier.
+                        Por tus aulas glorioso Colegio,
+                        Por tus aulas triunfal San José,
+                        Desfilaron valientes legiones
+                        Que son gloria de ciencia y de fe.
+                        Señor de los cielos
+                        Extiende tu mano
+                        Protege al Colegio
+                        Protégelo bien.
+                        Que fausta victoria
+                        Trenzando laureles
+                        Aliente sus lides,
+                        Corone su sien.
+                        Erguida la frente
+                        Con paso seguro
+                        Que triunfe doquiera
+                        El Gran San José...
+                        Bajo pliegues celestes y blancos
+                        Santuario de Luz y de Fe,
+                        Centinela de paz y de gloria,
+                        Te crearon triunfal San José.
+                        Ya tu nombre corrió las Provincias
+                        cual reguero de luz y saber
+                        cual reguero de chispas ardientes
+                        esparciendo tu gloria doquier.
+                        Por tus aulas glorioso Colegio,
+                        Por tus aulas triunfal San José,
+                        Desfilaron valientes legiones
+                        Que son gloria de ciencia y de fe.
+                    </p>
+                </div>
+        </div>
+
+            <div class="cancion" onclick="mostrarLetra(this)">
+                <img src="https://primerapagina.info/uploads/noticias/5/2026/03/20260304141002_image-2026-03-04-141001996.png" class="foto">
+                <span>🎵 Aurora</span>
+                
+                <div>
+                    <button
+                        class="like-btn"
+                        data-nombre="Aurora"
+                        onclick="event.stopPropagation(); toggleLike(this,'Aurora')">
+                        ❤️
+                    </button>
+                </div>
+
+                <div class="letra">
+                    <p>Letra de la cancion</p>
+                        Alta en el cielo un águila guerrera,
+                        audaz se eleva en vuelo triunfal,
+                        azul un ala del color del cielo,
+                        azul un ala del color del mar.
+                        Así en el alta aurora irradial,
+                        punta de flecha el áureo rostro imita,
+                        y forma estela al purpurado cuello,
+                        el ala es paño, el águila es bandera.
+                        Es la bandera de la Patria mía,
+                        del Sol nacida que me ha dado Dios;
+                        es la bandera de la Patria mía,
+                        del Sol nacida, que me ha dado Dios.
+                </div>
+            </div>
+
+            <div class="cancion" onclick="mostrarLetra(this)">
+                <img src="https://i.scdn.co/image/ab67616d0000b2738fc63b8d28641a9e99230c0c" class="foto">
+                <span>🎵 Himno Nacional Argentina</span>
+
+                <div>
+                    <button
+                        class="like-btn"
+                        data-nombre="Himno Nacional Argentina"
+                        onclick="event.stopPropagation(); toggleLike(this,'Himno Nacional Argentina')">
+                        ❤️
+                    </button>
+                </div>
+
+                <div class="letra">
+                    <p>Letra de la cancion</p>
+                        Oíd, mortales, el grito sagrado
+                        Libertad, libertad, libertad
+                        Oíd el ruido de rotas cadenas
+                        Ved en trono a la noble igualdad
+                        Ya su trono dignísimo abrieron
+                        Las provincias unidas del sur
+                        Y los libres del mundo responden
+                        Al gran pueblo argentino ¡salud!
+                        Al gran pueblo argentino ¡salud!
+                        Y los libres del mundo responden
+                        Al gran pueblo argentino ¡salud!
+                        Y los libres del mundo responden
+                        Al gran pueblo argentino ¡salud!
+                        Sean eternos los laureles
+                        Que supimos conseguir
+                        Que supimos conseguir
+                        nados de gloria vivamos
+                        O juremos con gloria morir
+                        O juremos con gloria morir
+                        O juremos con gloria morir
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
